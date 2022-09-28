@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+    --darkGrayishRed: hsl(0, 6%, 24%);
+    --gradient-1: hsl(0, 0%, 100%);
+    --gradient-2: hsl(0, 100%, 98%);
+    --gradient-3: hsl(0, 80%, 86%);
+    --gradient-4: hsl(0, 74%, 74%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--desaturatedRed);
+}
+
+.container {
+    width: 375px;
+    height: 800px;
+    margin: 0 auto 80px;
+    background-color: var(--gradient-2);
+}
+
+.container__logo {
+    width: 100px;
+    margin: 30px;
+}
+
+.container__picture {
+    margin-bottom: 60px;
+}
+
+.container__content__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    color: var(--darkGrayishRed);
+    font-weight: 700;
+    letter-spacing: 11px;
+    margin-bottom: 30px;
+}
+
+.container__content__title--color-red {
+    color: var(--desaturatedRed);
+    font-weight: 300;
+}
+
+.container__content__description {
+    margin: 0 40px 40px;
+    text-align: center;
+    font-size: .85em;
+    line-height: 1.4em;
+}
+
+.container__content__form {
+    width: 310px;
+    height: 50px;
+    margin: auto;
+    position: relative;
+}
+
+.container__content__form__email {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    padding-left: 16px;
+    border: 1px solid var(--desaturatedRed);
+    outline: none;
+    /* background-image: url(./images/icon-error.svg); */
+    background-repeat: no-repeat;
+    background-position: 210px;
+}
+
+.container__content__form__email::placeholder {
+    color: var(--desaturatedRed);
+}
+
+.container__content__form__buttom {
+    position: absolute;
+    right: 0;
+    width: 68px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--gradient-3), var(--gradient-4));
+    border: none;
+    padding: 15px 27px;
+}
+
+.container__content__form__buttom:hover {
+    background: linear-gradient(135deg, var(--gradient-2), var(--gradient-3));
+    box-shadow: 0 10px 15px var(--gradient-3);
+}
+
+.container__content__form__email--error {
+    font-size: .85em;
+    margin: 8px 0 0 14px;
+    color: var(--softRed);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* Desktop design */
+@media (min-width:1000px) {
+    .container {
+        width: 1440px;
+        height: 800px;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        position: relative;
+    }
+
+    .container__logo {
+        width: 160px;
+        margin: 65px 0 0 165px;
+    }
+
+    .container__picture {
+        content: url(./images/hero-desktop.jpg);
+        position: absolute;
+        right: 0;
+    }
+
+    .container__content {
+        width: 444px;
+        margin: 125px 0 0 165px;
+    }
+
+    .container__content__title {
+        text-align: left;
+        font-size: 4.1em;
+        letter-spacing: 15px;
+    }
+
+    .container__content__description {
+        text-align: left;
+        font-size: 1em;
+        margin: 0 0 40px;
+    }
+
+    .container__content__form {
+        width: 100%;
+        height: 60px;
+    }
+
+    .container__content__form__email {
+        background-position: 300px;
+    }
+
+    .container__content__form__buttom {
+        width: 100px;
+        height: 60px;
+        padding: 20px 40px;
+    }
+}
